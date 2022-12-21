@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
     public int gold;
     public Text health;
     public Text goldTxt;
+    public bool action;
+    public bool bonusAction;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,8 @@ public class PlayerManager : MonoBehaviour
         maxHealth = 100;
         currentHealth = 100;
         gold = 100;
+        action = true;
+        bonusAction = true;
     }
 
     // Update is called once per frame

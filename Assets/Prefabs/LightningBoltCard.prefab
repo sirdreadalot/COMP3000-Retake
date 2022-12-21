@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5858148873365673203}
   - component: {fileID: 5858148873365673202}
   - component: {fileID: -3775607770765468106}
+  - component: {fileID: -5423320848555827460}
   m_Layer: 5
   m_Name: LightningBoltCard
   m_TagString: LightningBoltCard
@@ -85,8 +86,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 5858148873365673200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e5de3feee5bea44e936dd25952471b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 00e1bb392cdbfee4cb8aa76e5155fa3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUp: {fileID: 0}
-  script: {fileID: 0}
+  Tag: 
+--- !u!61 &-5423320848555827460
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858148873365673200}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2094574, y: 0.1709938}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 158.93024, y: 219.15094}
+  m_EdgeRadius: 0

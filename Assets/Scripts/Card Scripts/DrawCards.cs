@@ -11,7 +11,6 @@ public class DrawCards : MonoBehaviour
     public GameObject defendCard;
     public GameObject lightningBoltCard;
     public GameObject playerHand;
-    public GameObject gameOver;
     public GameObject popUp;
     public Text pop;
     public Text enemyDmgTxt;
@@ -22,14 +21,11 @@ public class DrawCards : MonoBehaviour
 
     void Start()
     {
-        // Hide popup
-        GameObject.Find("popUp").transform.localScale = new Vector3(0, 0, 0);
-        popUp = GameObject.FindWithTag("PopUp");
-        playermanager = FindObjectOfType<PlayerManager>();
+
 
         // Create the enemies damage 
-        enemyDmg = Random.Range(1, 5);
-        enemyDmgTxt.text = "The enemy intends todo: " + enemyDmg.ToString() + " damage!";
+       // enemyDmg = Random.Range(1, 5);
+       // enemyDmgTxt.text = "The enemy intends todo: " + enemyDmg.ToString() + " damage!";
 
         //These for loops create the player's starting decklist, adding five strikes and defends as well as two lightning bolts.
         for (var i = 0; i < 4; i++) 
@@ -50,10 +46,6 @@ public class DrawCards : MonoBehaviour
         // A loop to draw the player a random hand of five cards from thier deck list.
         for (var i = 0; i < 5; i++)
         {
-            if (deckList.Count == 0)
-            {
-                gameOver.SetActive(true);
-            }
             if (hand.Count == 5)
             {
                 // Show popup
@@ -77,7 +69,7 @@ public class DrawCards : MonoBehaviour
 
     public void OnClick()
     {
-
+        // For the end turn button, so you throw away your old cards and redraw a new five.
 
         enemyDmgTxt.text = "The enemy intends todo: " + enemyDmg.ToString() + " damage!";
 
@@ -88,10 +80,6 @@ public class DrawCards : MonoBehaviour
         // A loop to draw the player a random hand of five cards from thier deck list.
         for (var i = 0; i < 5; i++)
         {
-            if (deckList.Count == 0) 
-            {
-                gameOver.SetActive(true);
-            }
             if (hand.Count == 5)
             {
                 // Show popup

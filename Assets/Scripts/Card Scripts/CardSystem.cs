@@ -6,26 +6,35 @@ using UnityEngine.UI;
 public class CardSystem : MonoBehaviour
 {
     [SerializeField]
-    public GameObject popUp;
-    private string Tag;
-    public Text pop;
+
+    private PlayerManager playermanager;
 
     public void OnMouseDown()
     {
-        if(gameObject.tag == "StrikeCard")
+        if (gameObject.tag == "StrikeCard")
         {
-            // Show popup
-            GameObject.Find("popUp").transform.localScale = new Vector3(1, 1, 1);
-            GameObject.Find("popUp").GetComponent<Text>();
-            pop.text = "Your hand is full!";
+            if(playermanager.action == true)
+            {
+
+            }
+            Debug.Log("Strike Clicked");
+
 
         }
-        else
+
+
+        if (gameObject.tag == "DefendCard")
         {
-            // Show popup
-            GameObject.Find("popUp").transform.localScale = new Vector3(1, 1, 1);
-            string pop = GameObject.Find("popUp").GetComponent<Text>().ToString();
-            pop = "Not strike clicked";
+            Debug.Log("Defend Clicked");
+
+
+        }
+
+        if (gameObject.tag == "LightningBoltCard")
+        {
+            Debug.Log("Lightning Bolt Clicked");
+
+
         }
     }
 }
