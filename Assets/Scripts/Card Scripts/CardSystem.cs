@@ -13,10 +13,14 @@ public class CardSystem : MonoBehaviour
     {
         if (gameObject.tag == "StrikeCard")
         {
-            if(playermanager.action == true)
-            {
-
-            }
+            //if(playermanager.action == true)
+            //{
+            //    Debug.Log("Strike Used");
+            //}
+            //else
+            //{
+            //    Debug.Log("Strike Not used");
+            //}
             Debug.Log("Strike Clicked");
 
 
